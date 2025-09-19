@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+
+# Superseded / debug scripts kept locally only
+archive/
+
+# Data is large (~650 MB) and the processed/ tree is fully regenerable from raw.
+# Ignore everything under data/, but keep a small sample of raw recordings so the
+# expected layout and the phyphox file format are visible in the repo.
+/data/**
+!/data/raw/
+!/data/raw/Biceps/
+!/data/raw/Biceps/Biceps_1/
+!/data/raw/Biceps/Biceps_1/**
+!/data/raw/Slow_walking/
+!/data/raw/Slow_walking/Slowwalking_1/
+!/data/raw/Slow_walking/Slowwalking_1/**
+!/data/raw/Stairs_down/
+!/data/raw/Stairs_down/Stairs_down_1/
+!/data/raw/Stairs_down/Stairs_down_1/**
+
+# Keep the trained model (small) so predict works on clone; never the ML export formats.
+models/*.onnx
+models/*.h5

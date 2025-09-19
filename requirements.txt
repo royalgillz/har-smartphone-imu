@@ -1,0 +1,17 @@
+# HAR smartphone IMU pipeline -- actual runtime dependencies.
+# The original requirements.txt was a UTF-16 dump that listed TensorFlow/Keras/ONNX,
+# none of which the code imports. The pipeline is pure PyTorch + the PyData stack.
+# Pinned to latest stable as of June 2026 (Python 3.14).
+
+torch==2.12.0
+numpy==2.4.6
+pandas==3.0.3
+scikit-learn==1.9.0
+scipy==1.17.1
+matplotlib==3.11.0
+
+# Optional: Claude API summary layer (src/har/summarize.py); needs ANTHROPIC_API_KEY.
+anthropic==0.109.2
+
+# Optional: only used by analysis/tooling scripts, not the core pipeline.
+pypdf==6.13.2
