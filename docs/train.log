@@ -1,0 +1,70 @@
+Loaded 6279 windows | shape (192, 18) | 17 classes | 120 recordings
+Recordings -> train 73, val 22, test 25
+Windows    -> train 3920, val 1127, test 1232
+[note] no test data for: [np.str_('Elevator_up'), np.str_('Running_pocket')]
+Saved normalisation stats -> data\processed\windowed\norm_stats.npz
+
+Training on cpu for 30 epochs (augmented)...
+  epoch  1/30  loss=198.9690  val_acc=0.701
+  epoch  2/30  loss=85.1223  val_acc=0.718
+  epoch  3/30  loss=60.3294  val_acc=0.752
+  epoch  4/30  loss=45.3778  val_acc=0.735
+  epoch  5/30  loss=58.7611  val_acc=0.636
+  epoch  6/30  loss=48.7765  val_acc=0.750
+  epoch  7/30  loss=35.2923  val_acc=0.764
+  epoch  8/30  loss=29.4928  val_acc=0.788
+  epoch  9/30  loss=24.7728  val_acc=0.760
+  epoch 10/30  loss=25.2978  val_acc=0.775
+  epoch 11/30  loss=27.1833  val_acc=0.791
+  epoch 12/30  loss=27.2333  val_acc=0.786
+  epoch 13/30  loss=25.2034  val_acc=0.777
+  epoch 14/30  loss=22.1889  val_acc=0.753
+  epoch 15/30  loss=23.1201  val_acc=0.803
+  epoch 16/30  loss=25.4511  val_acc=0.745
+  epoch 17/30  loss=21.7574  val_acc=0.787
+  epoch 18/30  loss=21.7574  val_acc=0.782
+  epoch 19/30  loss=15.9045  val_acc=0.780
+  epoch 20/30  loss=16.0936  val_acc=0.781
+  epoch 21/30  loss=15.8760  val_acc=0.757
+  epoch 22/30  loss=18.3060  val_acc=0.783
+  epoch 23/30  loss=15.5829  val_acc=0.795
+  epoch 24/30  loss=17.6598  val_acc=0.785
+  epoch 25/30  loss=13.1835  val_acc=0.800
+  epoch 26/30  loss=20.9411  val_acc=0.776
+  epoch 27/30  loss=18.6774  val_acc=0.750
+  epoch 28/30  loss=14.6858  val_acc=0.780
+  epoch 29/30  loss=18.0778  val_acc=0.783
+  epoch 30/30  loss=14.8932  val_acc=0.776
+Restored best model (val_acc=0.803)
+Saved model -> models\cnn_lstm_har.pth
+  plot -> docs\plots\class_distribution.png
+  plot -> docs\plots\training_curves.png
+
+=== Held-out TEST (split by recording) ===
+accuracy=0.908  macro-F1=0.725  weighted-F1=0.899
+                    precision    recall  f1-score   support
+
+            Biceps       0.85      0.96      0.90       120
+     Elevator_down       0.39      0.88      0.54         8
+       Elevator_up       0.00      0.00      0.00         0
+           Jumping       0.97      0.85      0.91        73
+            Lunges       1.00      0.93      0.96        58
+    Normal_walking       0.00      0.00      0.00        43
+          Rotation       0.99      1.00      1.00       164
+     Round_Cycling       1.00      0.96      0.98        50
+Running_Hand_still       1.00      1.00      1.00       157
+    Running_pocket       0.00      0.00      0.00         0
+         Side_walk       0.94      0.83      0.88       144
+      Sit_to_stand       0.69      0.91      0.78        22
+      Slow_walking       0.90      0.96      0.93       180
+            Squats       0.71      0.95      0.81        37
+       Stairs_down       1.00      1.00      1.00         4
+      Stand_to_sit       0.74      0.64      0.68        22
+  Straight_cycling       0.94      0.97      0.96       150
+
+          accuracy                           0.91      1232
+         macro avg       0.71      0.75      0.73      1232
+      weighted avg       0.90      0.91      0.90      1232
+
+  plot -> docs\plots\confusion_matrix.png
+  plot -> docs\plots\per_class_f1.png

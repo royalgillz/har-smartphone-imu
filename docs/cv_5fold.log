@@ -1,0 +1,11 @@
+5-fold CV on 6279 windows / 120 recordings, 20 epochs/fold, device=cpu, augment=True
+
+  fold 1/5: acc=0.892  macro-F1=0.630  (test 1245 windows from 24 recordings)
+  fold 2/5: acc=0.851  macro-F1=0.611  (test 1270 windows from 24 recordings)
+  fold 3/5: acc=0.643  macro-F1=0.397  (test 1251 windows from 24 recordings)
+  fold 4/5: acc=0.870  macro-F1=0.629  (test 1245 windows from 24 recordings)
+  fold 5/5: acc=0.812  macro-F1=0.548  (test 1268 windows from 24 recordings)
+
+=== 5-fold cross-validation ===
+accuracy : 0.814 +/- 0.089
+macro-F1 : 0.563 +/- 0.088

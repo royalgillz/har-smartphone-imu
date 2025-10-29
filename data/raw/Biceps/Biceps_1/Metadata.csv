@@ -1,0 +1,2 @@
+version,device name,recording epoch time,recording time,recording timezone,platform,appVersion,device id,sensors,sampleRateMs,standardisation
+3,Pixel 8a,1764634054322,2025-12-02_00-07-34,America/New_York,android,1.49.0,9a5fd47f-6e19-40cc-a86d-b593d9f1de30,Accelerometer|Gravity|Gyroscope|Orientation|Barometer|Annotation|TotalAcceleration|GyroscopeUncalibrated|AccelerometerUncalibrated,10|10|10|10|0||10|10|10,false
